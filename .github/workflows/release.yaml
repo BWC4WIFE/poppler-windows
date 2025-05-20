@@ -1,10 +1,12 @@
-name: Package For Windose
+name: Package For Windows
 
 on:
   workflow_dispatch
   push:
     branches:
       - master
+    release:
+      types: [published]
       
 jobs:
   package:
