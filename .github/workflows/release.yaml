@@ -21,7 +21,14 @@ jobs:
       run: conda install -c conda-forge poppler -y
     - name: Run Package Script
       shell: bash -l {0}
-      run: ./package.sh
+      run: |
+        mkdir -p poppler-package
+        cp -r /c/Miniconda/envs/test/Library/bin poppler-package/
+        cp -r /c/Miniconda/envs/test/Library/include poppler-package/
+        cp -r /c/Miniconda/envs/test/Library/lib poppler-package/
+        cp -r /c/Miniconda/envs/test/Library/share poppler-package/
+        ls -R poppler-package/
+        ./package.sh
       env:
         PKGS_PATH_DIR: /c/Users/runneradmin/conda_pkgs_dir
     - name: Zip Release
