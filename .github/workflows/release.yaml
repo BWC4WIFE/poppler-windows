@@ -7,7 +7,6 @@ on:
       - master
   release:
     types: [published]
-      
 jobs:
   package:
     name: Package Release
