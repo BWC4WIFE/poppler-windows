@@ -1,4 +1,4 @@
-name: Package For Windows
+name: Package For Windoze
 
 on:
   workflow_dispatch
