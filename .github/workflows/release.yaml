@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-    release:
+  release:
       types: [published]
       
 jobs:
@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout Repo
-      uses: actions/checkout@master
+      uses: actions/checkout@v4
     - name: Setup Miniconda
       uses: conda-incubator/setup-miniconda@v3
     - name: Install Poppler
